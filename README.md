@@ -30,8 +30,8 @@ A simple RESTful Todo API built with Go, Fiber, PostgreSQL, and GORM.
 
 1. Clone the repo:
    ```
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-   cd YOUR-REPO
+   git clone https://github.com/Roshan-Ravindran/todo-go.git
+   cd todo-go
    ```
 2. Copy `.env.example` to `.env` and set your database variables.
 
