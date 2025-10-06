@@ -35,6 +35,17 @@ A simple RESTful Todo API built with Go, Fiber, PostgreSQL, and GORM.
    ```
 2. Copy `.env.example` to `.env` and set your database variables.
 
+   ## Example Env File
+
+   ```
+   DB_HOST=localhost
+   DB_PORT=5432
+   DB_USER=postgres
+   DB_PASS= **\*\*\*\***
+   DB_NAME=todo_db
+   DB_SSLMODE=disable
+   ```
+
 3. Install dependencies:
    ```
    go mod tidy
@@ -44,12 +55,30 @@ A simple RESTful Todo API built with Go, Fiber, PostgreSQL, and GORM.
    go run main.go
    ```
 
-## Folder Structure
+### Example POST /api/add_todo body:
 
-- `main.go` – Entry point, sets up API and DB
-- `models/` – GORM models and migrations
-- `storage/` – Database connection layer
+    {
+    "item": "Buy groceries",
+    "completed": false
+    }
 
-## License
+### 📦 Folder Structure
 
-MIT
+    ├── main.go
+    ├── models/
+    │ └── todo_list.go
+    ├── storage/
+    │ └── postgres.go
+    ├── go.mod
+    ├── go.sum
+    └── .env
+
+### 🎯 Future Improvements
+
+- Add JWT authentication
+- Add CLI interface for managing Todos
+- Deploy using Docker and AWS ECS
+
+### 📄 License
+
+This project is open-source under the MIT License.
